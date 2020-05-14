@@ -12,7 +12,7 @@ namespace LINQStuff
 
             //List<string> lst = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
             //sln.FoundATh(lst);
-            
+
             //List<string> names = new List<string>() { "Mike", "Brad", "Nevin", "Ian", "Mike" };
             //sln.NoDuplicates(names);
 
@@ -25,7 +25,8 @@ namespace LINQStuff
             //};
             //Console.WriteLine(sln.ClassAverageAfterLowestGradeDropped(classGrades));
 
-
+            string mrT = "Terrill";
+            Console.WriteLine(sln.OrderedAndNumbered(mrT));
         }
     }
 }

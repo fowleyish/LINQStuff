@@ -37,5 +37,24 @@ namespace LINQStuff
             }
             return firstAverages.Average();
         }
+
+        public string OrderedAndNumbered(string word)
+        {
+            word = word.ToUpper();
+            var wordList = word.ToList();
+            var distinctLetters = wordList.OrderBy(x => x).Distinct().ToList();
+            var frequency = new List<int>();
+            foreach(var letter in wordList)
+            {
+                frequency.Add(wordList.Where(x => x.Equals(letter)).Count());
+            }
+            string returnString = null;
+            for (int i = 0; i < distinctLetters.Count; i++)
+            {
+                returnString += distinctLetters[i];
+                returnString += frequency[i];
+            }
+            return returnString;
+        }
     }
 }
